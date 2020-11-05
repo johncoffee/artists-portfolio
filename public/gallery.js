@@ -2,8 +2,6 @@ let cursor = 0
 
 const baseFolder = 'images/'
 const gallery = [
-  'a1.jpg',
-  'a2.jpg',
   'b1.jpg',
   't1.jpg',
   't2.jpg',
