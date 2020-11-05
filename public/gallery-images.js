@@ -21,7 +21,6 @@ window.gallery = [
   "Room 1 plant 2.jpg",
   "Room 1 plant 3.jpg",
   "Room 1 plant 4.jpg",
-  "Room Portrait 1 Evil.jpg",
-  "gallery.js"
+  "Room Portrait 1 Evil.jpg"
 ]
   

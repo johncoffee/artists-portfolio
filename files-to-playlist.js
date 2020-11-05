@@ -11,10 +11,9 @@ exec('ls '+imgFolder, (err, result) => {
 
   const dataColumns = lines
     .filter(l => !!l)
-    .filter(line => line.search(/\.jp?eg/i))
-  // .map(line => {
-  // })
+    .filter(line => line.match(/\.jpe*g/i) !== null)
 
+  console.log('writing:')
   console.log(dataColumns)
 
   writeFileSync(join('public', '/gallery-images.js'), ` // auto generated file!
