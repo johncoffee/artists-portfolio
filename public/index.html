@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="height-100">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <title>things</title>
+
+    <style>
+        .hide {
+            display: none
+        }
+    </style>
+    <style>
+        @import "vendor/foundation.min.css";
+        @import "vendor/foundation-prototype.min.css";
+        @import "styles.css";
+    </style>
+</head>
+<body class="height-100">
+
+<div class="grid-container full height-100 noselect">
+
+    <div class="grid-y height-100 gallery">
+        <div class="cell auto">
+            <div class="grid-x align-right height-100">
+                <div class="cell shrink">
+                    <button class="button" data-action="prev">PREV</button>
+                    <button class="button" data-action="next">MORE!</button>
+                </div>
+            </div>
+        </div>
+        <div class="cell padding-1 text-right">
+            <button class="button margin-bottom-0" data-action="fullscreen">FULL SCREEN</button>
+        </div>
+    </div>
+
+</div>
+
+<script async src="gallery.js"></script>
+</body>
+</html>

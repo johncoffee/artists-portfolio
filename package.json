@@ -1,0 +1,17 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "n/a",
+  "scripts": {
+    "ghpages": "gh-pages -d public"
+  },
+  "author": "n/a",
+  "license": "ISC",
+  "optionalDependencies": {
+    "gh-pages": "^2.2.0",
+    "ipfs-deploy": "^7.14.0"
+  },
+  "devDependencies": {
+    "foundation-sites": "^6.6.3"
+  }
+}
