@@ -1,31 +1,35 @@
-let cursor = 0
+let cursor = -1
 
 const baseFolder = 'images/'
-const gallery = [
-  'b1.jpg',
-  't1.jpg',
-  't2.jpg',
-]
+
+function reset() {
+  cursor = 0
+  setImg(cursor)
+}
 
 function next () {
   cursor += 1
   if (cursor === gallery.length) cursor = 0
   setImg(cursor)
+
+  if (cursor === 1)
+  document.querySelector(`[data-role="intro-text"]`).classList.add('hide')
 }
 
 function prev () {
   cursor -= 1
   if (cursor === -1) cursor = gallery.length - 1
   setImg(cursor)
+  document.querySelector(`[data-role="intro-text"]`).classList.add('hide')
 }
 
-function setImg (index = 0) {
+function setImg (index) {
   document.querySelector('.gallery')
     .style.backgroundImage = `url('${baseFolder}${gallery[index]}')`
 }
 
 clickHandlers()
-next()
+reset()
 
 function clickHandlers () {
   document.addEventListener('keydown', evt => {

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <title>things</title>
 
+    <!-- Calendly badge widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script type="text/javascript">Calendly.initBadgeWidget({ url: 'https://calendly.com/tishgreen/a-chat-about-your-walls?hide_gdpr_banner=1', text: 'Let\'s chat about your walls', color: '#34412f', textColor: '#ffffff', branding: true });</script>
+    <!-- Calendly badge widget end -->
     <style>
         .hide {
             display: none
@@ -23,20 +28,32 @@
 
     <div class="grid-y height-100 gallery">
         <div class="cell auto">
-            <div class="grid-x align-right height-100">
-                <div class="cell shrink">
-                    <button class="button" data-action="prev">PREV</button>
-                    <button class="button" data-action="next">MORE!</button>
+            <div class="grid-x align-middle height-100">
+                <div class="cell medium-auto padding-1 bg-green" data-role="intro-text">
+                    <h1>Hello! My name is Tish</h1>
+                    <p class="margin-0">I paint pretty, big, dark drawings on walls, checkout my showcase!</p>
+                </div>
+                <div class="cell medium-auto text-right padding-1" style="white-space: nowrap">
+                    <button class="button margin-right-1 hide" data-action="prev">PREV
+                    </button><button
+                        class="button" data-action="next">MORE!</button>
                 </div>
             </div>
         </div>
-        <div class="cell padding-1 text-right">
-            <button class="button margin-bottom-0" data-action="fullscreen">FULL SCREEN</button>
+        <div class="cell padding-1 shrink">
+            <button class="button margin-bottom-0" data-action="fullscreen">Enter FULL screen wooo</button>
+            <div class="margin-bottom-3"></div>
         </div>
     </div>
 
 </div>
 
-<script async src="gallery.js"></script>
+<script>
+  Calendly.initInlineWidget({
+    parentElement: document.getElementById('cal-container'),
+  });
+</script>
+<script src="gallery-images.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>

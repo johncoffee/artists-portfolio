@@ -13,9 +13,23 @@ body {
                                   supported by Chrome and Opera */
 }
 
+button.button:hover,
+button.button:focus,
+button.button {
+    border-radius: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    background-color: rgb(52, 65, 47);
+}
+
+.bg-green {
+    background-color: rgb(52, 65, 47);
+}
+
 /*components*/
 
 .gallery {
     background: transparent url('/') 50% 50% no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
