@@ -12,8 +12,17 @@ function next () {
   if (cursor === gallery.length) cursor = 0
   setImg(cursor)
 
-  if (cursor === 1)
-  document.querySelector(`[data-role="intro-text"]`).classList.add('hide')
+  if (cursor === 1) {
+    document.querySelector(`[data-role="intro-text"]`).classList.add('hide')
+  }
+
+  const preloadLink = document.createElement('link')
+  preloadLink.href = `${baseFolder}${gallery[cursor+1]}`
+  preloadLink.rel = 'preload'
+  preloadLink.as = 'image'
+  if (!document.querySelector(`link[preload="${preloadLink.getAttribute('href')}"]`)) {
+    document.head.appendChild(preloadLink)
+  }
 }
 
 function prev () {
