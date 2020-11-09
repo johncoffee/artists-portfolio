@@ -4,6 +4,7 @@
   "description": "n/a",
   "scripts": {
     "start": "npx http-server -o",
+    "build": "node files-to-playlist.js",
     "ghpages": "gh-pages -d public"
   },
   "author": "n/a",

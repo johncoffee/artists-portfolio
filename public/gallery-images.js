@@ -1,11 +1,11 @@
  // auto generated file!
 window.gallery = [
+  "1.jpg",
   "4.jpg",
   "5.jpg",
   "6.jpg",
   "7.jpg",
   "8.jpg",
-  "IMG_1936.JPG",
   "Landscape 2 hat.jpg",
   "Landscape 2 haunted.jpg",
   "Landscape 2 lady.jpg",
