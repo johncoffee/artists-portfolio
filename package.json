@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "n/a",
   "scripts": {
+    "start": "npx http-server -o",
     "ghpages": "gh-pages -d public"
   },
   "author": "n/a",
