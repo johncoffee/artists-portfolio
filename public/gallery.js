@@ -12,9 +12,9 @@ function next () {
   if (cursor === gallery.length) cursor = 0
   setImg(cursor)
 
-  if (cursor === 1) {
-    document.querySelector(`[data-role="intro-text"]`).classList.add('hide')
-  }
+  // if (cursor === 1) {
+    // document.querySelector(`[data-role="intro-text"]`).classList.add('hide')
+  // }
 
   const preloadLink = document.createElement('link')
   preloadLink.href = `${baseFolder}${gallery[cursor+1]}`
