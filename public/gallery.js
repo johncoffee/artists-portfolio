@@ -45,6 +45,11 @@ function clickHandlers () {
     .forEach(el => el.addEventListener('click', evt => {
       const val = evt.target.getAttribute('data-action')
       switch (val) {
+        case "clicknav":
+          if (evt.target === document.querySelector('[data-action="clicknav"]')) {
+            next()
+          }
+          return
         case 'fullscreen':
           return toggleFullscreen('html')
         default:
