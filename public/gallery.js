@@ -29,7 +29,6 @@ function prev () {
   cursor -= 1
   if (cursor === -1) cursor = gallery.length - 1
   setImg(cursor)
-  document.querySelector(`[data-role="intro-text"]`).classList.add('hide')
 }
 
 function setImg (index) {
@@ -37,30 +36,27 @@ function setImg (index) {
     .style.backgroundImage = `url('${baseFolder}${gallery[index]}')`
 }
 
+document.addEventListener('keydown', evt => {
+  switch (evt.key) {
+    case "ArrowRight":
+      return next()
+    case "ArrowLeft":
+      return prev()
+  }
+})
 clickHandlers()
 reset()
 
 function clickHandlers () {
-  document.addEventListener('keydown', evt => {
-    switch (evt.key) {
-      case "ArrowRight":
-        return next()
-      case "ArrowLeft":
-        return prev()
-    }
-  })
-
   Array.from(document.querySelectorAll('[data-action]'))
     .forEach(el => el.addEventListener('click', evt => {
-      const val = evt.target.getAttribute('data-action')
+      evt.stopPropagation()
+      const val = el.getAttribute('data-action')
       switch (val) {
-        case "clicknav":
-          if (evt.target === document.querySelector('[data-action="clicknav"]')) {
-            next()
-          }
-          return
         case 'fullscreen':
           return toggleFullscreen('html')
+        case null:
+          return console.debug(val, 'didnt do anything')
         default:
           return window[val]()
       }

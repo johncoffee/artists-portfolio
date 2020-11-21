@@ -33,3 +33,15 @@ button.button {
     background: transparent url('/') 50% 50% no-repeat;
     background-size: contain;
 }
+
+
+/*arrows*/
+.arrow {
+    transform: scale(3)
+}
+.arrow-left {
+    border-right-color: #4ff17280;
+}
+.arrow-right {
+    border-left-color: #4ff17280;
+}
